@@ -20,6 +20,5 @@ RUN set -e; \
     sudo rm -rf $HOME/.config;
 
 SHELL ["/bin/sh", "-c"]
-USER root
 
-EXPOSE 8000
+USER root

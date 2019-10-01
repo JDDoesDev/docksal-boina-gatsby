@@ -1,5 +1,8 @@
 version: "2.1"
 services:
+  cli:
+    environment:
+      - DRUSH_OPTIONS_URI=${VIRTUAL_HOST}
   gatsby:
     hostname: gatsby
     image: ${COMPOSE_PROJECT_NAME_SAFE}_gatsby
@@ -16,8 +19,6 @@ services:
       - HOST_UID
       - HOST_GID
       - CHOKIDAR_USEPOLLING=1
-      - NODE_ENV=development
-      - DRUSH_OPTIONS_URI=${VIRTUAL_HOST}
     working_dir: /var/www/gatsby
     dns:
       - ${DOCKSAL_DNS1}
