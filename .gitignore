@@ -27,3 +27,6 @@
 
 .docksal/docksal-local.*
 **/settings.local.php
+
+.vscode
+/settings.json
